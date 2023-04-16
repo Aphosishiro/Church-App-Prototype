@@ -1,3 +1,4 @@
+import 'package:church_app_prototype/screens/home/home.dart';
 import 'package:flutter/material.dart';
 
 class BottomNavigation extends StatefulWidget {
@@ -8,15 +9,20 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-
-  int currentIndex = 1;
+  int currentIndex = 0;
+  final screens = [
+    const Home(),
+    const Home(),
+    const Home(),
+  ];
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.white,
-      body: SafeArea(child: Column()),
+      body: screens[currentIndex],
       bottomNavigationBar: BottomNavigationBar(
+          currentIndex: currentIndex,
           backgroundColor: const Color(0xFFF88406),
           type: BottomNavigationBarType.fixed,
           selectedItemColor: Colors.white,

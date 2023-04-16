@@ -60,8 +60,12 @@ class Onboarding extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: Padding(
-        padding: EdgeInsets.symmetric(
-            vertical: size.height * 0.1, horizontal: size.width * 0.08),
+        padding: EdgeInsets.fromLTRB(
+          size.width * 0.1,
+          size.height * 0.15,
+          size.width * 0.1,
+          0,
+        ),
         child: Column(
           children: [
             SizedBox(

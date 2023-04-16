@@ -76,8 +76,8 @@ class Register extends StatelessWidget {
             children: [
               CircleAvatar(
                 radius: size.width * 0.045,
-                backgroundColor: Colors.red,
-                //backgroundImage: const AssetImage("assets/Google.png"),
+                backgroundColor: Colors.white,
+                backgroundImage: const AssetImage("assets/Google.png"),
               ),
               Text(
                 "Continue with Google",
