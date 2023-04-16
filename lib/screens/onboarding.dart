@@ -1,3 +1,4 @@
+import 'package:church_app_prototype/screens/authentication/login.dart';
 import 'package:church_app_prototype/shared/constant.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,17 @@ class Onboarding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size size = MediaQuery.of(context).size;
+
+    void navigatetonextscreen(Widget navigate) {
+      Navigator.push(
+        context,
+        MaterialPageRoute(
+          builder: (context) {
+            return navigate;
+          },
+        ),
+      );
+    }
 
     buildOnboardingText() {
       return Center(
@@ -34,7 +46,9 @@ class Onboarding extends StatelessWidget {
         width: double.infinity,
         child: ElevatedButton(
           style: buttonStyle,
-          onPressed: () {},
+          onPressed: () {
+            navigatetonextscreen(const Login());
+          },
           child: Text(
             "Get Started",
             style: buttonTextStyle,
