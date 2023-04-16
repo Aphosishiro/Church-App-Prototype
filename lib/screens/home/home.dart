@@ -28,7 +28,7 @@ class Home extends StatelessWidget {
 
     buildVerseOfTheDayCard() {
       return Container(
-        height: 180,
+        height: size.height * 0.26,
         width: double.infinity,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
@@ -147,49 +147,52 @@ class Home extends StatelessWidget {
           size.width * 0.1,
           0,
         ),
-        child: Column(
-          children: [
-            buildHeader(),
-            SizedBox(
-              height: size.height * 0.04,
-            ),
-            buildVerseOfTheDayCard(),
-            SizedBox(
-              height: size.height * 0.03,
-            ),
-            buildMessageHeader(),
-            SizedBox(
-              height: size.height * 0.02,
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(
-                children: [
-                  buildMessageCards(
-                    "assets/message 1.jpg",
-                    "Understanding God's will",
-                    "Rev. Emmanuel David",
-                  ),
-                  SizedBox(
-                    width: size.width * 0.03,
-                  ),
-                  buildMessageCards(
-                    "assets/message 2.jpg",
-                    "A New Dawn",
-                    "Rev. Saminu Durotoye",
-                  ),
-                  SizedBox(
-                    width: size.width * 0.03,
-                  ),
-                  buildMessageCards(
-                    "assets/message 3.jpg",
-                    "Faith and Works",
-                    "Rev. Ajulo Alfred",
-                  ),
-                ],
+        child: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Column(
+            children: [
+              buildHeader(),
+              SizedBox(
+                height: size.height * 0.04,
               ),
-            )
-          ],
+              buildVerseOfTheDayCard(),
+              SizedBox(
+                height: size.height * 0.03,
+              ),
+              buildMessageHeader(),
+              SizedBox(
+                height: size.height * 0.02,
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    buildMessageCards(
+                      "assets/pstchris.png",
+                      "Understanding God's will",
+                      "Rev. Chris Oyakhilome",
+                    ),
+                    SizedBox(
+                      width: size.width * 0.03,
+                    ),
+                    buildMessageCards(
+                      "assets/psttunde.png",
+                      "A New Dawn",
+                      "Rev. Tunde Bakare",
+                    ),
+                    SizedBox(
+                      width: size.width * 0.03,
+                    ),
+                    buildMessageCards(
+                      "assets/pstadeboye.jpg",
+                      "Faith and Works",
+                      "Rev. Enoch Adeboye",
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );
