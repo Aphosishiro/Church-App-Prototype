@@ -9,7 +9,7 @@ class BottomNavigation extends StatefulWidget {
 }
 
 class _BottomNavigationState extends State<BottomNavigation> {
-  int currentIndex = 0;
+  int currentIndex = 1;
   final screens = [
     const Home(),
     const Home(),

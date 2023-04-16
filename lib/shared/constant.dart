@@ -19,6 +19,18 @@ TextStyle subHeaderTextVariable = const TextStyle(
   color: Color(0xFFF88406),
 );
 
+TextStyle titleTextStyle = const TextStyle(
+  fontFamily: "Poppins",
+  fontSize: 13,
+  color: Colors.white,
+);
+
+TextStyle subtitleTextStyle = const TextStyle(
+  fontFamily: "Poppins",
+  fontSize: 12,
+  color: Colors.white,
+);
+
 TextStyle buttonTextStyle = const TextStyle(
   fontFamily: "Nunito",
   fontSize: 18,
