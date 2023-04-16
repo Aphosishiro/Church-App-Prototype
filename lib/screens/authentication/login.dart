@@ -1,5 +1,5 @@
 import 'package:church_app_prototype/screens/authentication/register.dart';
-import 'package:church_app_prototype/screens/home/home.dart';
+import 'package:church_app_prototype/widgets/bottom_nav_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:church_app_prototype/shared/constant.dart';
 
@@ -55,7 +55,7 @@ class Login extends StatelessWidget {
         child: ElevatedButton(
           style: buttonStyle,
           onPressed: () {
-            navigatetonextscreen(const Home());
+            navigatetonextscreen(const BottomNavigation());
           },
           child: Text(
             "Login",
