@@ -94,8 +94,8 @@ class Home extends StatelessWidget {
 
     buildMessageCards(String image, String title, String preacher) {
       return Container(
-        height: size.height * 0.34,
-        width: size.width * 0.5,
+        height: size.height * 0.35,
+        width: size.width * 0.55,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(10),
           image: DecorationImage(
@@ -140,60 +140,76 @@ class Home extends StatelessWidget {
 
     return Scaffold(
       backgroundColor: Colors.white,
-      body: Padding(
-        padding: EdgeInsets.fromLTRB(
-          size.width * 0.1,
-          size.height * 0.08,
-          size.width * 0.1,
-          0,
-        ),
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            children: [
-              buildHeader(),
-              SizedBox(
-                height: size.height * 0.04,
-              ),
-              buildVerseOfTheDayCard(),
-              SizedBox(
-                height: size.height * 0.03,
-              ),
-              buildMessageHeader(),
-              SizedBox(
-                height: size.height * 0.02,
-              ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    buildMessageCards(
-                      "assets/pstchris.png",
-                      "Understanding God's will",
-                      "Rev. Chris Oyakhilome",
-                    ),
-                    SizedBox(
-                      width: size.width * 0.03,
-                    ),
-                    buildMessageCards(
-                      "assets/psttunde.png",
-                      "A New Dawn",
-                      "Rev. Tunde Bakare",
-                    ),
-                    SizedBox(
-                      width: size.width * 0.03,
-                    ),
-                    buildMessageCards(
-                      "assets/pstadeboye.jpg",
-                      "Faith and Works",
-                      "Rev. Enoch Adeboye",
-                    ),
-                  ],
+      body: Column(
+        children: [
+          Padding(
+            padding: EdgeInsets.fromLTRB(
+              size.width * 0.1,
+              size.height * 0.08,
+              size.width * 0.1,
+              0,
+            ),
+            child: Column(
+              children: [
+                buildHeader(),
+                SizedBox(
+                  height: size.height * 0.04,
                 ),
-              )
-            ],
+                buildVerseOfTheDayCard(),
+                SizedBox(
+                  height: size.height * 0.03,
+                ),
+                buildMessageHeader(),
+                SizedBox(
+                  height: size.height * 0.02,
+                ),
+              ],
+            ),
           ),
-        ),
+          Padding(
+            padding: EdgeInsets.fromLTRB(
+              size.width * 0.1,
+              0,
+              0,
+              0,
+            ),
+            child: Column(
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      buildMessageCards(
+                        "assets/pstchris.png",
+                        "Understanding God's will",
+                        "Rev. Chris Oyakhilome",
+                      ),
+                      SizedBox(
+                        width: size.width * 0.03,
+                      ),
+                      buildMessageCards(
+                        "assets/psttunde.png",
+                        "A New Dawn",
+                        "Rev. Tunde Bakare",
+                      ),
+                      SizedBox(
+                        width: size.width * 0.03,
+                      ),
+                      buildMessageCards(
+                        "assets/pstadeboye.jpg",
+                        "Faith and Works",
+                        "Rev. Enoch Adeboye",
+                      ),
+                      SizedBox(
+                        width: size.width * 0.1,
+                      ),
+                    ],
+                  ),
+                )
+              ],
+            ),
+          ),
+        ],
       ),
     );
   }
